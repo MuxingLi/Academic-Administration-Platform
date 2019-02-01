@@ -1,0 +1,55 @@
+package servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import dao.StudentDao;
+
+public class DeleteStudent extends HttpServlet {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	/**
+	 * Constructor of the object.
+	 */
+	public DeleteStudent() {
+		super();
+	}
+
+
+	public void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		response.setContentType("text/html;charset=UTF-8");
+		PrintWriter out = response.getWriter();
+		String stuid=request.getParameter("id");
+		StudentDao dao=new StudentDao();
+		int i=dao.deleteStudentById(stuid);
+		if(i==0){
+			out.println("<script language=javascript>");				
+			out.println("alert('删除失败');");	
+			out.println("window.location.href='SelectAllStudentsServlet'");
+			out.println("</script>");
+		}else {
+			out.println("<script language=javascript>");				
+			out.println("alert('删除成功');");	
+			out.println("window.location.href='SelectAllStudentsServlet'");
+			out.println("</script>");
+		}
+		out.flush();
+		out.close();
+	}
+		
+	public void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		
+
+	}
+}

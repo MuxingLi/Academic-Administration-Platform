@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*{margin:0px; color:;background-color:#51DAFE;}*/
+#header{ margin-left:auto; margin-right:auto;
+		background-image:; 
+		width:1024px; height:67px; 
+		border-bottom-width:thin}
+#msg{margin-left:auto; margin-right:auto;width:974px;
+		 height:50px; padding-left:50px;line-height:50px;
+		  border-width:thin }
+#left{margin-left:auto; margin-right:auto;width:250px;
+		 height:599px; float:left;border-width:thin; 
+		 padding-left:50px;padding-top:20px}
+#main{margin-left:auto; margin-right:auto;width:1024px;
+		 height:619px;border-width:thin; }
+#footer{margin-left:auto; margin-right:auto;border-width:thin;
+		width:1024px; height:60px;
+		text-align:center; line-height:60px; font-size:16px}
+#user{width:300px; float:left}
+#time{width:600px; float:left; text-align:center}
+
+iframe{border:none; width:718px; height:619px}
+#login{ margin:auto; margin-top:250px;background-image:url(..); height:167px; width:216px; padding-left:690px; padding-top:100px; color:#333}
+.txt{width:100px}
+nonborder{border:none}

@@ -1,0 +1,842 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <display-name>jwManager</display-name>
+  <welcome-file-list>
+    <welcome-file>SelectNewsMainPage</welcome-file>
+    <welcome-file>SelectNewsMainPage</welcome-file>
+    <welcome-file>SelectNewsMainPage</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <filter>
+    <display-name>LoginFilter</display-name>
+    <filter-name>LoginFilter</filter-name>
+    <filter-class>common.LoginFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>LoginFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <description></description>
+    <display-name>HelloServlet</display-name>
+    <servlet-name>a</servlet-name>
+    <servlet-class>servlet.HelloServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>a</servlet-name>
+    <url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdateUserServlet</servlet-name>
+    <servlet-class>servlet.UpdateUserServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>InsertStudent</servlet-name>
+    <servlet-class>servlet.InsertStudent</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DeleteStudent</servlet-name>
+    <servlet-class>servlet.DeleteStudent</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdateStudent</servlet-name>
+    <servlet-class>servlet.UpdateStudent</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SelectAllStudentsServlet</servlet-name>
+    <servlet-class>servlet.SelectAllStudentsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SelectStudent</servlet-name>
+    <servlet-class>servlet.SelectStudent</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>InsertTeacher</servlet-name>
+    <servlet-class>servlet.InsertTeacher</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DeleteTeacher</servlet-name>
+    <servlet-class>servlet.DeleteTeacher</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdateTeacher</servlet-name>
+    <servlet-class>servlet.UpdateTeacher</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SelectAllTeachersServlet</servlet-name>
+    <servlet-class>servlet.SelectAllTeachersServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SelectTeacher</servlet-name>
+    <servlet-class>servlet.SelectTeacher</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LogoffServlet</servlet-name>
+    <servlet-class>servlet.LogoffServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SelectStudentDetail</servlet-name>
+    <servlet-class>servlet.SelectStudentDetail</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SelectTeacherDetail</servlet-name>
+    <servlet-class>servlet.SelectTeacherDetail</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>InsertClassroom</servlet-name>
+    <servlet-class>servlet.InsertClassroom</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SelectAllClassroomsServlet</servlet-name>
+    <servlet-class>servlet.SelectAllClassroomsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DeleteClassroom</servlet-name>
+    <servlet-class>servlet.DeleteClassroom</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdateClassroom</servlet-name>
+    <servlet-class>servlet.UpdateClassroom</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SelectClassroomDetail</servlet-name>
+    <servlet-class>servlet.SelectClassroomDetail</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>InsertCourse</servlet-name>
+    <servlet-class>servlet.InsertCourse</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DeleteCourseById</servlet-name>
+    <servlet-class>servlet.DeleteCourseById</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdateCourse</servlet-name>
+    <servlet-class>servlet.UpdateCourse</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SelectAllCoursesServlet</servlet-name>
+    <servlet-class>servlet.SelectAllCoursesServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SelectCourseDetail</servlet-name>
+    <servlet-class>servlet.SelectCourseDetail</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SelectAllStudentCourses</servlet-name>
+    <servlet-class>servlet.SelectAllStudentCourses</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>InsertStudentCourseInto</servlet-name>
+    <servlet-class>servlet.InsertStudentCourseInto</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SelectStudentCourse</servlet-name>
+    <servlet-class>servlet.SelectStudentCourse</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DeleteStudentCourse</servlet-name>
+    <servlet-class>servlet.DeleteStudentCourse</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpLoadServlet</servlet-name>
+    <servlet-class>servlet.UpLoadServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>InsertCourseArrange</servlet-name>
+    <servlet-class>servlet.InsertCourseArrange</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpLoadTeacherServlet</servlet-name>
+    <servlet-class>servlet.UpLoadTeacherServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SelectAllCoursesMark</servlet-name>
+    <servlet-class>servlet.SelectAllCoursesMark</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdateMark</servlet-name>
+    <servlet-class>servlet.UpdateMark</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SelectAllCoursesMark2</servlet-name>
+    <servlet-class>servlet.SelectAllCoursesMark2</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdateMark2</servlet-name>
+    <servlet-class>servlet.UpdateMark2</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SelectAllMarks</servlet-name>
+    <servlet-class>servlet.SelectAllMarks</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ApplyClassroom</servlet-name>
+    <servlet-class>servlet.ApplyClassroom</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SelectAllApplyAdmin</servlet-name>
+    <servlet-class>servlet.SelectAllApplyAdmin</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SelectApplyDetail</servlet-name>
+    <servlet-class>servlet.SelectApplyDetail</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AcceptApplyServlet</servlet-name>
+    <servlet-class>servlet.AcceptApplyServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>RefuseApplyServlet</servlet-name>
+    <servlet-class>servlet.RefuseApplyServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SelectAllApplyTech</servlet-name>
+    <servlet-class>servlet.SelectAllApplyTech</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SelectApplyTechDetail</servlet-name>
+    <servlet-class>servlet.SelectApplyTechDetail</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SelectCourseList</servlet-name>
+    <servlet-class>servlet.SelectCourseList</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SelectStudentList</servlet-name>
+    <servlet-class>servlet.SelectStudentList</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SelectCourse</servlet-name>
+    <servlet-class>servlet.SelectCourse</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SelectClassroom</servlet-name>
+    <servlet-class>servlet.SelectClassroom</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SelectApplyAdmin</servlet-name>
+    <servlet-class>servlet.SelectApplyAdmin</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>InsertSC</servlet-name>
+    <servlet-class>servlet.InsertSC</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SelectMark</servlet-name>
+    <servlet-class>servlet.SelectMark</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SelectApplyTech</servlet-name>
+    <servlet-class>servlet.SelectApplyTech</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SelectCourseList1</servlet-name>
+    <servlet-class>servlet.SelectCourseList1</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SelectCourseMark</servlet-name>
+    <servlet-class>servlet.SelectCourseMark</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SelectCourseMark2</servlet-name>
+    <servlet-class>servlet.SelectCourseMark2</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>InsertNewsServlet</servlet-name>
+    <servlet-class>servlet.InsertNewsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SelectAllNewsServlet</servlet-name>
+    <servlet-class>servlet.SelectAllNewsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SelectAllNewsServlet1</servlet-name>
+    <servlet-class>servlet.SelectAllNewsServlet1</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SelectNewsDetail</servlet-name>
+    <servlet-class>servlet.SelectNewsDetail</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdateNews</servlet-name>
+    <servlet-class>servlet.UpdateNews</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DeleteNews</servlet-name>
+    <servlet-class>servlet.DeleteNews</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SelectNewsMainPage</servlet-name>
+    <servlet-class>servlet.SelectNewsMainPage</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SelectNewsMainDetail</servlet-name>
+    <servlet-class>servlet.SelectNewsMainDetail</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SelectNewsMainKind</servlet-name>
+    <servlet-class>servlet.SelectNewsMainKind</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SelectNewsMainKind1</servlet-name>
+    <servlet-class>servlet.SelectNewsMainKind1</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SelectNewsMainSearch</servlet-name>
+    <servlet-class>servlet.SelectNewsMainSearch</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UploadCourse</servlet-name>
+    <servlet-class>servlet.UploadCourse</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>InsertProgram</servlet-name>
+    <servlet-class>servlet.InsertProgram</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SelectAllPrograms</servlet-name>
+    <servlet-class>servlet.SelectAllPrograms</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdateProgram</servlet-name>
+    <servlet-class>servlet.UpdateProgram</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DeleteProgram</servlet-name>
+    <servlet-class>servlet.DeleteProgram</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SelectAllCoursesStu</servlet-name>
+    <servlet-class>servlet.SelectAllCoursesStu</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>InsertCourseArrange1</servlet-name>
+    <servlet-class>servlet.InsertCourseArrange1</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpLoadProgram</servlet-name>
+    <servlet-class>servlet.UpLoadProgram</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>InsertCourseArrangeTech</servlet-name>
+    <servlet-class>servlet.InsertCourseArrangeTech</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>InsertCourseArrangeTech1</servlet-name>
+    <servlet-class>servlet.InsertCourseArrangeTech1</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DownloadNews</servlet-name>
+    <servlet-class>servlet.DownloadNews</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateUserServlet</servlet-name>
+    <url-pattern>/UpdateUserServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>InsertStudent</servlet-name>
+    <url-pattern>/InsertStudent</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteStudent</servlet-name>
+    <url-pattern>/DeleteStudent</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateStudent</servlet-name>
+    <url-pattern>/UpdateStudent</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SelectAllStudentsServlet</servlet-name>
+    <url-pattern>/SelectAllStudentsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SelectStudent</servlet-name>
+    <url-pattern>/SelectStudent</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>InsertTeacher</servlet-name>
+    <url-pattern>/InsertTeacher</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteTeacher</servlet-name>
+    <url-pattern>/DeleteTeacher</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateTeacher</servlet-name>
+    <url-pattern>/UpdateTeacher</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SelectAllTeachersServlet</servlet-name>
+    <url-pattern>/SelectAllTeachersServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SelectTeacher</servlet-name>
+    <url-pattern>/SelectTeacher</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LogoffServlet</servlet-name>
+    <url-pattern>/LogoffServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SelectStudentDetail</servlet-name>
+    <url-pattern>/SelectStudentDetail</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SelectTeacherDetail</servlet-name>
+    <url-pattern>/SelectTeacherDetail</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>InsertClassroom</servlet-name>
+    <url-pattern>/InsertClassroom</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SelectAllClassroomsServlet</servlet-name>
+    <url-pattern>/SelectAllClassroomsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteClassroom</servlet-name>
+    <url-pattern>/DeleteClassroom</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateClassroom</servlet-name>
+    <url-pattern>/UpdateClassroom</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SelectClassroomDetail</servlet-name>
+    <url-pattern>/SelectClassroomDetail</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>InsertCourse</servlet-name>
+    <url-pattern>/InsertCourse</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteCourseById</servlet-name>
+    <url-pattern>/DeleteCourseById</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateCourse</servlet-name>
+    <url-pattern>/UpdateCourse</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SelectAllCoursesServlet</servlet-name>
+    <url-pattern>/SelectAllCoursesServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SelectCourseDetail</servlet-name>
+    <url-pattern>/SelectCourseDetail</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SelectAllStudentCourses</servlet-name>
+    <url-pattern>/SelectAllStudentCourses</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>InsertStudentCourseInto</servlet-name>
+    <url-pattern>/InsertStudentCourseInto</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SelectStudentCourse</servlet-name>
+    <url-pattern>/SelectStudentCourse</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteStudentCourse</servlet-name>
+    <url-pattern>/DeleteStudentCourse</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpLoadServlet</servlet-name>
+    <url-pattern>/UpLoadServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>InsertCourseArrange</servlet-name>
+    <url-pattern>/InsertCourseArrange</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpLoadTeacherServlet</servlet-name>
+    <url-pattern>/UpLoadTeacherServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SelectAllCoursesMark</servlet-name>
+    <url-pattern>/SelectAllCoursesMark</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateMark</servlet-name>
+    <url-pattern>/UpdateMark</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SelectAllCoursesMark2</servlet-name>
+    <url-pattern>/SelectAllCoursesMark2</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateMark2</servlet-name>
+    <url-pattern>/UpdateMark2</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SelectAllMarks</servlet-name>
+    <url-pattern>/SelectAllMarks</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ApplyClassroom</servlet-name>
+    <url-pattern>/ApplyClassroom</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SelectAllApplyAdmin</servlet-name>
+    <url-pattern>/SelectAllApplyAdmin</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SelectApplyDetail</servlet-name>
+    <url-pattern>/SelectApplyDetail</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AcceptApplyServlet</servlet-name>
+    <url-pattern>/AcceptApplyServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RefuseApplyServlet</servlet-name>
+    <url-pattern>/RefuseApplyServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SelectAllApplyTech</servlet-name>
+    <url-pattern>/SelectAllApplyTech</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SelectApplyTechDetail</servlet-name>
+    <url-pattern>/SelectApplyTechDetail</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SelectCourseList</servlet-name>
+    <url-pattern>/SelectCourseList</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SelectStudentList</servlet-name>
+    <url-pattern>/SelectStudentList</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SelectCourse</servlet-name>
+    <url-pattern>/SelectCourse</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SelectClassroom</servlet-name>
+    <url-pattern>/SelectClassroom</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SelectApplyAdmin</servlet-name>
+    <url-pattern>/SelectApplyAdmin</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>InsertSC</servlet-name>
+    <url-pattern>/InsertSC</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SelectMark</servlet-name>
+    <url-pattern>/SelectMark</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SelectApplyTech</servlet-name>
+    <url-pattern>/SelectApplyTech</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SelectCourseList1</servlet-name>
+    <url-pattern>/SelectCourseList1</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SelectCourseMark</servlet-name>
+    <url-pattern>/SelectCourseMark</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SelectCourseMark2</servlet-name>
+    <url-pattern>/SelectCourseMark2</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>InsertNewsServlet</servlet-name>
+    <url-pattern>/InsertNewsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SelectAllNewsServlet</servlet-name>
+    <url-pattern>/SelectAllNewsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SelectAllNewsServlet1</servlet-name>
+    <url-pattern>/SelectAllNewsServlet1</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SelectNewsDetail</servlet-name>
+    <url-pattern>/SelectNewsDetail</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateNews</servlet-name>
+    <url-pattern>/UpdateNews</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteNews</servlet-name>
+    <url-pattern>/DeleteNews</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SelectNewsMainPage</servlet-name>
+    <url-pattern>/SelectNewsMainPage</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SelectNewsMainDetail</servlet-name>
+    <url-pattern>/SelectNewsMainDetail</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SelectNewsMainKind</servlet-name>
+    <url-pattern>/SelectNewsMainKind</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SelectNewsMainKind1</servlet-name>
+    <url-pattern>/SelectNewsMainKind1</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SelectNewsMainSearch</servlet-name>
+    <url-pattern>/SelectNewsMainSearch</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UploadCourse</servlet-name>
+    <url-pattern>/UploadCourse</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>InsertProgram</servlet-name>
+    <url-pattern>/InsertProgram</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SelectAllPrograms</servlet-name>
+    <url-pattern>/SelectAllPrograms</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateProgram</servlet-name>
+    <url-pattern>/UpdateProgram</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteProgram</servlet-name>
+    <url-pattern>/DeleteProgram</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SelectAllCoursesStu</servlet-name>
+    <url-pattern>/SelectAllCoursesStu</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>InsertCourseArrange1</servlet-name>
+    <url-pattern>/InsertCourseArrange1</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpLoadProgram</servlet-name>
+    <url-pattern>/UpLoadProgram</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>InsertCourseArrangeTech</servlet-name>
+    <url-pattern>/InsertCourseArrangeTech</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>InsertCourseArrangeTech1</servlet-name>
+    <url-pattern>/InsertCourseArrangeTech1</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DownloadNews</servlet-name>
+    <url-pattern>/DownloadNews</url-pattern>
+  </servlet-mapping>
+</web-app>

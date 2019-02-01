@@ -1,0 +1,195 @@
+package servlet;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import java.io.*;  
+import java.util.List;  
+  
+import java.util.UUID;
+
+import org.apache.commons.fileupload.FileItem;  
+import org.apache.commons.fileupload.FileUploadBase;
+import org.apache.commons.fileupload.disk.DiskFileItemFactory;  
+import org.apache.commons.fileupload.servlet.ServletFileUpload; 
+
+import common.Decode;
+import dao.Ht2Dao;
+import dto.Hetong2;
+
+public class InsertJswjServlet extends HttpServlet {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	/**
+	 * Constructor of the object.
+	 */
+	public InsertJswjServlet() {
+		super();
+	}
+
+	/**
+	 * Destruction of the servlet. <br>
+	 */
+	public void destroy() {
+		super.destroy(); // Just puts "destroy" string in log
+		// Put your code here
+	}
+
+
+	public void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		doPost(request,response);
+	}
+
+	public void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		  request.setCharacterEncoding("utf-8");  //设置编码  
+          
+	        //获得磁盘文件条目工厂  
+	        DiskFileItemFactory factory = new DiskFileItemFactory();  
+	        //高水平的API文件上传处理  
+	        ServletFileUpload upload = new ServletFileUpload(factory); 
+	        upload.setHeaderEncoding("UTF-8");
+
+	        String pid=null;
+	        String hid=null;
+	        String hname=null;
+	        
+	        		
+	        String hperson=null;
+	       
+	        String hmoney=null;
+	       
+	        String jsmoney=null;
+	       
+	        String fabaoname=null;
+	        String gongfangname=null;
+	        String manyi=null;
+	        String shenpi=null;
+	        String shifouyoutu=null;
+	        String tuid=null;
+	        String file1=null;
+	        
+	        //设置 缓存的大小，当上传文件的容量超过该缓存时，直接放到 暂时存储室  
+	        factory.setSizeThreshold(1024*1024) ;     
+	        try {  
+	            //可以上传多个文件  
+	            List<FileItem> list = (List<FileItem>)upload.parseRequest(request);  
+	              
+	            for(FileItem item : list)  
+	            {  
+	                //获取表单的属性名字  
+	                String name = item.getFieldName();  
+	                //获取原始文件名
+	                String oriFilename=item.getName();
+	                //如果获取的 表单信息是普通的 文本 信息  
+	                if(item.isFormField())  
+	                {                     
+	                    //获取用户具体输入的字符串 ，名字起得挺好，因为表单提交过来的是 字符串类型的  
+	                    String content = item.getString() ;   
+	                    content=Decode.decode(content);
+	                    //request.setAttribute(name, content);  
+	                    if(name.equals("select5")){
+	                    	 pid=content;
+	                    }else if(name.equals("txt1")){
+	                    	 hid=content;
+	                    }else if(name.equals("datevalue20")){
+	                    	 hname=content;
+
+	                    }else if(name.equals("datevalue21")){
+	                    	 hmoney=content;
+
+	                    }else if(name.equals("datevalue22")){
+	                    	 jsmoney=content;
+	                    }else if(name.equals("datevalue23")){
+
+	                    	 shifouyoutu=content;
+
+	                    }else if(name.equals("datevalue24")){
+	                    	 tuid=content;
+	                    }else if(name.equals("textarea3")){
+
+	                    	 shenpi=content;
+
+	                    }else if(name.equals("datevalue25")){
+	                    	 hperson=content;
+
+	                    }else if(name.equals("select3")){
+	                    	 manyi=content;
+
+	                    }else if(name.equals("datevalue26")){
+
+	                    	 gongfangname=content;
+
+	                    }else if(name.equals("datevalue27")){
+
+	                    	 fabaoname=content;
+	                    }
+	                   
+	                }  
+	                //对传入的非 简单的字符串进行处理 ，比如说二进制的 图片，电影这些  
+	                else  
+	                {  
+	                	//获取文件需要上传到的绝对路径  
+	        	        String realPath = request.getSession().getServletContext().getRealPath("/upload/");   
+	                  //  if(suffixList.contains(suffix)){}			//限制上传的格式
+	        	        //获取后缀名
+	        	        String suffix=oriFilename.substring(oriFilename.lastIndexOf("."));
+	        	        //相对路径(真实路径)
+	        	        String relativePath=UUID.randomUUID().toString()+suffix;
+	        	         file1=relativePath;				//存入数据库的属性名
+	        	        File file=new File(realPath,relativePath);
+	        	        //写入硬盘
+	        	        item.write(file);
+	                }  
+	            }  
+	            Ht2Dao dao=new Ht2Dao();
+	            Hetong2 ht=new Hetong2();
+	            ht.setPid(pid);
+	            ht.setHid(hid);
+	            ht.setHmoney(hmoney);
+	            ht.setHname(hname);
+	            ht.setHperson(hperson);
+	            ht.setFabaoname(fabaoname);
+	            ht.setGongfangname(gongfangname);
+	            ht.setShenpi(shenpi);
+	            ht.setShifouyoutu(shifouyoutu);
+	            ht.setTuid(tuid);
+	            ht.setJsmoney(jsmoney);
+	            ht.setManyi(manyi);
+	            ht.setFname(file1);
+	            dao.Insert(ht);
+	          response.sendRedirect("SelectAllHt2Servlet");  
+	            
+	          
+	        } catch (Exception e) {  
+	            // TODO Auto-generated catch block  
+	           if(e instanceof FileUploadBase.FileSizeLimitExceededException)
+	        	response.getWriter().write("文件过大，请上传1M大小！"); 
+	        
+	        }  
+	          
+	          
+	        
+		
+	}
+
+	/**
+	 * Initialization of the servlet. <br>
+	 *
+	 * @throws ServletException if an error occurs
+	 */
+	public void init() throws ServletException {
+		// Put your code here
+	}
+
+}

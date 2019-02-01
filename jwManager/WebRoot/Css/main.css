@@ -1,0 +1,185 @@
+body{margin:0; padding:0; font-size:12pt;}
+
+#top{width:100%; height:60px; background:url(../Images/main_04.jpg);}
+
+#logo{width:357px; height:60px; background:url(../Images/main_02.gif); float:left; margin-left:32px;}
+
+#user{ margin-top:38px; padding-left:40px;
+float:right;
+padding-right:80px}
+
+#main{width:100%;background:url(../Images/main_bg.gif) repeat-x;}
+
+#left{width:188px; float:left; background-image:url(../Images/main_bg.gif) ; background-repeat:repeat-x;
+}
+
+#left_menu{ width:184px;background:url(../Images/main_07.jpg) no-repeat; height:52px; margin-left:4px;}
+
+#left_tree{width:184px; background:url(../Images/main_19.gif); height:530px; margin-left:4px;}
+
+#tree_icon{width:162px; height:95px; background:url(../Images/main_12.gif); margin-left:11px; text-align:center;}
+
+#tree_text{ width:162px; margin-left:11px; margin-top:0px; list-style:none;}
+
+.tree_li {list-style:none; line-height:25px;
+}
+.tree_li:hover{
+	text-decoration:none;
+	background-color:#f5f5f5;
+}
+.tree_li:active{
+	text-decoration:none;
+	background-color:#ecefef;
+}
+.tree_li a{
+	text-decoration:none;
+	font-size:14px;
+	color:#000;
+}
+.tree_li a:active{
+	color:#37596D;
+	text-decoration:none;
+}
+.list_img{margin-right:5px; width:3px; margin-left:5px;}
+
+#yh{width:50px; height:50px; float:left; margin-left:20px; margin-top:10px; line-height:25px; color:#fff;}
+
+#system{width:50px; height:50px; float:right; margin-right:20px; margin-top:10px; line-height:25px; color:#fff;}
+
+#tree_down{height:17px; width:184px; margin-left:4px; margin-bottom:0px; background:url(../Images/main_21.gif);}
+
+#right_top{height:35px;color:#fff;background-image:url(../Images/main_09.gif) ; background-repeat:repeat-x;}
+
+#right_top_body{
+	overflow:hidden;
+}
+#img{height:26px; width:35px; float:left;padding-top:5px; text-align:center;}
+
+.imgtext{ float:left; display: block; margin-top:13px; margin-left:3px;}
+
+#loginout{float:right; margin-right:35px;padding-top:5px; text-align:center; width:80px;}
+
+#loginoutimg{width:26px; height:26px; float:left;}
+
+.logintext{display: block; padding-top:3px; margin-left:3px;
+float:left;
+font-size:16px;
+font-weight:bold;}
+.logintext a{
+	color:#fff;
+	text-decoration:none;
+}
+
+
+#right_font{padding-top:10px;height:28px; background-image:url(../Images/main_10.gif) ; background-repeat:repeat-x;}
+
+#right_font img {padding-right:8px; margin-left:15px;}
+
+.bfont{ font-weight:bolder; font-size:9pt;}
+
+.STYLE1 {font-size: 15px;}
+.STYLE3 {color: #707070; font-size: 14px; }
+.STYLE5 {color: #0a6e0c; font-size: 14px; }
+.STYLE7 {font-size: 12px}
+body {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+input{border:none;}
+textarea{border:none;}
+#font15{font-size: 15px;}
+#font14{font-size: 14px;}
+<!-- RightTop-Setting-->
+
+#NavContent {
+	width:934px;
+	float:left;
+	line-height:27px;
+	text-decoration:none;
+}
+#NavContent ul {
+	margin-left:0px;
+	list-style-type:none;
+}
+#NavContent li {
+	float:left;
+}
+#NavContent li a {
+	width:100px;
+	font-size:14px;
+	font-weight:bold;
+	text-align:center;
+	display:block;
+	height:27px;
+	color:#FFF;
+	text-decoration:none;
+}
+#NavContent ul ul {
+	_margin-left:-50px;  /*IE6 HACK*/
+	position:absolute;
+	background-color:#37596D;
+	visibility:hidden;
+}
+#NavContent li li {
+	line-height:27px;
+	float:none;
+	/*position:absolute;
+	left:0px;*/
+	width:100px;
+}
+#NavContent li li a {
+	line-height:27px;
+	width:100px;
+	text-decoration:none;
+}
+/* 2ND LIST BEGINING */
+#NavContent ul li ul {background-color:#37596D; position:absolute;
+display:none;
+list-style-type:none;
+list-style-image:url(../Images/001.gif) }
+#NavContent ul li ul li {
+	/*position:absolute;*/
+	float:none;	
+}
+#NavContent ul li ul li a { 
+border-right:none;
+border-top:1px dotted #ccc;
+background:#37596D;
+text-decoration:none;
+  }
+#NavContent ul li:hover ul{ display:block; }
+
+
+/* 2ND LIST END */
+#NavContent a:hover {
+	background-color:#375987;
+	background-image:url(../Images/main_09_1.jpg);
+	background-position:0 -38px;
+}
+#NavContent ul li:hover ul {
+	visibility:visible;
+}
+#NavContent ul a:hover ul {
+	visibility:visible;
+}
+#Nav{
+	z-index:99;
+	position:absolute;
+	left:188px;
+	top:55px;
+	width:100%;
+	margin:0 auto;
+}
+#Nav{
+	background-position:0 -38px;
+	height:27px;
+}
+
+#right{	width:1160px;float:right;}
+a{text-decoration:none;}
+#btn_loca{line-height:15px; height:30px; width:50px;}
+#btn_loca1{line-height:15px; height:30px; width:80px;float:right;}
+
+
+table{border-collapse:collapse;border-spacing:0;border-left:1px solid #888;border-top:1px solid #888;}
+th,td{border-right:1px solid #888;border-bottom:1px solid #888;padding:5px 15px;}
